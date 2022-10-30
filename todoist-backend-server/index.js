@@ -10,7 +10,7 @@ var cors = require('cors');
 app.use(cors());
 
 //import the harperdb instance
-const db = require("./dbconfig");
+const db = require("../dbconfig");
 
 // set server port
 const port = process.env.PORT || 3000;
