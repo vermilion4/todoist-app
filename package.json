@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "node todoist-backend-server/index.js",
-    "build": "cd todoist && npm install && npm run build",
+    "build": "cd todoist && npm install && npm run build --output public",
     "dev": "nodemon index.js"
   }
 }
