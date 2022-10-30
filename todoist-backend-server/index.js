@@ -57,7 +57,7 @@ app.get("/todos", async (req, res) =>
     res.status(200).send(response);
   } catch (error)
   {
-    res.send(500).send("Something went wrong");
+    res.status(500).send("Something went wrong");
   }
 });
 
@@ -70,7 +70,7 @@ app.post("/clear", async (req, res) =>
     res.status(200).send(response);
   } catch (error)
   {
-    res.send(500).send("Something went wrong");
+    res.status(500).send("Something went wrong");
   }
 });
 
