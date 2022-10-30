@@ -251,6 +251,7 @@ li {
 #ellipsis {
   cursor: pointer;
 }
+
 .task-menu.show {
   transform: scale(1);
 }
