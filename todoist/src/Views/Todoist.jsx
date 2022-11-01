@@ -2,8 +2,7 @@ import React from 'react';
 import Header from '../Components/Header';
 import Controls from '../Components/Controls';
 import ListContainer from '../List/ListContainer';
-import axios from 'axios';
-import { useState } from 'react';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Content rendered on /all path
 const Todoist = ({
@@ -21,23 +20,10 @@ const Todoist = ({
   setTodoText,
   setEditState,
   clearBtnState,
+  addTodoItem,
+  isInputDisabled,
+  setIsInputDisabled,
 }) => {
-  const [isInputDisabled, setIsInputDisabled] = useState(false);
-  // Add function
-  const addTodoItem = async () => {
-    setIsInputDisabled(true);
-    await axios
-      .post('/add', `title=${todoText}`)
-      .then(async () => {
-        setTodoText('');
-        await fetchTodos();
-      })
-      .then(() => setIsInputDisabled(false))
-      .catch((error) => {
-        console.log(error);
-      });
-  };
-
   return (
     <React.Fragment>
       <div className='wrapper'>

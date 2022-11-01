@@ -4,14 +4,17 @@ import Delete from '@iconscout/react-unicons/icons/uil-trash';
 
 const Settings = ({ component, text, func, id }) => {
   return (
-    <li onClick={() => func(id)}>
+    <li
+      onClick={() => {
+        func(id);
+      }}>
       {component}
       {text}
     </li>
   );
 };
 
-const SettingsContainer = ({ deleteTodo, id, edit }) => {
+const SettingsContainer = ({ deleteConfirm, id, edit }) => {
   const handleClick = (event) => {
     let currentElement = event.currentTarget.parentElement.lastElementChild;
 
@@ -33,7 +36,7 @@ const SettingsContainer = ({ deleteTodo, id, edit }) => {
       <ul className={`task-menu`}>
         <Settings id={id} func={edit} component={<Edit />} text='Edit' />
         <Settings
-          func={deleteTodo}
+          func={deleteConfirm}
           id={id}
           component={<Delete />}
           text='Delete'

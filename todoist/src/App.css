@@ -34,6 +34,11 @@ body {
   color: #fff;
   background: #2e2f30;
 }
+#root {
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+}
 .wrapper {
   max-width: 405px;
   padding: 28px 0 30px;
@@ -50,7 +55,9 @@ body {
 #edit-mode-text.show {
   display: block;
 }
-
+.delete-modal {
+  background-color: #0d0d0d;
+}
 .head-section {
   display: flex;
   align-items: center;
